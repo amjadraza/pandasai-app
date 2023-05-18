@@ -1,44 +1,20 @@
 import streamlit as st
 from openai.error import OpenAIError
-from pandasai import PandasAI
-from pandasai.llm.openai import OpenAI
+import sys
+import os
+sys.path.append(os.path.abspath('.'))
+
 from pandasai_app.components.sidebar import sidebar
-from pandasai_app.utils import parse_csv
-
-
-def clear_submit():
-    """
-    Clear the Submit Button State
-    Returns:
-
-    """
-    st.session_state["submit"] = False
-
-
-def run_pandasai_openaiapi(df, prompt, verbose=False):
-    """
-    A function to run the Query on given Pandas Dataframe
-    Args:
-        df: Pandas dataframe
-        prompt: Query / Prompt related to data
-        verbose: A parameter to show the intermediate code generation
-
-    Returns: Response / Results
-
-    """
-
-    llm = OpenAI(api_token=st.session_state.get("OPENAI_API_KEY"))
-    pandas_ai = PandasAI(llm, verbose=verbose)
-    response = pandas_ai.run(df, prompt=prompt)
-
-    return response
-
+from pandasai_app.utils import parse_csv, run_pandasai_openaiapi, clear_submit
 
 if __name__ == '__main__':
 
-    st.set_page_config(page_title="PANDASAI APP: Generative AI with Pandas", page_icon="📖", layout="wide")
+    st.set_page_config(
+        page_title="PANDASAI APP: Generative AI with Pandas",
+        page_icon="📖",
+        layout="wide",
+        initial_sidebar_state="expanded",)
     st.header("📖 Pandasai App")
-
     sidebar()
 
     # Upload the File

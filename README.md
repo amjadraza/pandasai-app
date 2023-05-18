@@ -36,12 +36,29 @@ cd pandasai_app
 streamlit run main.py 
 ```
 
+Run App using Docker
+--------------------
+This project includes `Dockerfile` to run the app in Docker container.
+
+Build the docker container
+
+``docker  build -t pandasai-app .``
+
+1. Run the docker container directly 
+
+``docker run -d --name pai_app -p 8501:8501 pandasai-app``
+
+2. Run the docker container using docker-compose (Recommended)
+
+``docker-compose up``
+
 ## 🚀 Upcoming Features
 
 - [ ] Add support for more models (e.g.HuggingFace, Azure.).
 - [ ] Adding Functionality of Plotting.
 - [ ] Some Generic insights on Uploaded Data (e.g Shape, head etc)
-- [ ] Adding Docker Support to run the App in Docker
+- [x] Adding Docker Support to run the App in Docker
+- [ ] Deploying App on Google App Engine
 
 ## Report Feedbacks
 

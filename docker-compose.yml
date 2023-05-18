@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pandasai-app:
+    image: pandasai-app
+    build: ./app
+    command: streamlit run pandasai_app/main.py
+    volumes:
+      - ./pandasai_app/:/app/pandasai_app
+    ports:
+      - 8501:8501
