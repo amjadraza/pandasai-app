@@ -58,6 +58,7 @@ Build the docker container
 - [ ] Adding Functionality of Plotting.
 - [ ] Some Generic insights on Uploaded Data (e.g Shape, head etc)
 - [x] Adding Docker Support to run the App in Docker
+- [ ] Push Docker Image to DockerHub for Public use
 - [ ] Deploying App on Google App Engine
 
 ## Report Feedbacks
