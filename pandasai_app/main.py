@@ -54,8 +54,7 @@ if uploaded_file:
 
 openai_api_key = st.sidebar.text_input("OpenAI API Key",
                                         type="password",
-                                        placeholder="Paste your OpenAI API key here (sk-...)",
-                                        help="You can get your API key from https://platform.openai.com/account/api-keys.")  # noqa: E501)
+                                        placeholder="Paste your OpenAI API key here (sk-...)")
 
 with st.sidebar:
         st.markdown("---")
