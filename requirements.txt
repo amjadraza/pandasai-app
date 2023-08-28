@@ -1,2 +1,0 @@
-streamlit == 1.22.0
-pandasai == 0.2.13
