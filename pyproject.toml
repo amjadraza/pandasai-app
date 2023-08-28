@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pandasai-app"
-version = "0.1.0"
+version = "1.0.0"
 description = "An app to have conversational pandas dataframes"
 authors = ["Datafy Associates <info@datafyassociates.com>"]
 license = "MIT"
@@ -9,12 +9,14 @@ packages = [{include = "pandasai_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-streamlit = "^1.17.0"
-cohere = "^3.2.1"
+streamlit = ">=1.25"
 faiss-cpu = "^1.7.3"
 pillow = "^9.4.0"
 tenacity = "^8.2.0"
-pandasai = "0.2.13"
+pandasai = "^1.0.9"
+langchain = {version = ">=0.0.252", extras = ["docarray"]}
+tabulate = "^0.9.0"
+beautifulsoup4 = "^4.12.2"
 
 
 [tool.poetry.group.dev.dependencies]
