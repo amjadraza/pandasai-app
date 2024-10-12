@@ -2,7 +2,7 @@
 # from langchain.llms import OpenAI
 from pandasai import SmartDataframe
 from pandasai.llm import OpenAI
-from pandasai.callbacks import StdoutCallback
+# from pandasai.callbacks import StdoutCallback
 from pandasai.llm import OpenAI
 import streamlit as st
 import pandas as pd
@@ -99,13 +99,15 @@ if prompt := st.chat_input(placeholder="What is this data about?"):
     #PandasAI OpenAI Model
     llm = OpenAI(api_token=openai_api_key)
     # llm = OpenAI(api_token=openai_api_key)
-
+    print(df.head())
     sdf = SmartDataframe(df, config = {"llm": llm,
                                         "enable_cache": False,
                                         "conversational": True,
-                                        "callback": StdoutCallback()})
+                                        # "callback": StdoutCallback()
+                                        })
 
     with st.chat_message("assistant"):
-        response = sdf.chat(st.session_state.messages)
+        print(st.session_state.messages)
+        response = sdf.chat(prompt)
         st.session_state.messages.append({"role": "assistant", "content": response})
         st.write(response)

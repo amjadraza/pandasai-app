@@ -8,19 +8,16 @@ readme = "README.md"
 packages = [{include = "pandasai_app"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-streamlit = ">=1.25"
-faiss-cpu = "^1.7.3"
-pillow = "^9.4.0"
-tenacity = "^8.2.0"
-pandasai = "^1.0.9"
-tabulate = "^0.9.0"
-beautifulsoup4 = "^4.12.2"
+python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
+streamlit = "1.39.0"
+pandasai = "2.2.15"
+numpy = "1.26.3"
+PyYAML = "^6.0.2"
 
 
 [tool.poetry.group.dev.dependencies]
-python-dotenv = "^1.0.0"
-pytest = "^7.2.1"
+python-dotenv = "^1.0.1"
+pytest = "8.3.3"
 
 
 [tool.poetry.group.lint.dependencies]
