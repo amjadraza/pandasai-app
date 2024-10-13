@@ -15,6 +15,7 @@ file_formats = {
     "xlsx": pd.read_excel,
     "xlsm": pd.read_excel,
     "xlsb": pd.read_excel,
+    "feather": pd.read_feather
 }
 
 def clear_submit():
