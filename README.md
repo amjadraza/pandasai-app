@@ -29,6 +29,15 @@ poetry install
 poetry shell
 ```
 
+2B. Using `uv` Package Manager to prepare the virtual environment
+
+```bash
+uv venv
+uv pip install -r requirements.txt
+```
+
+> `uv` package managere is ultra fast. 
+
 3. Run the Streamlit server🚀
 
 ```bash

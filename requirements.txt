@@ -1,0 +1,5 @@
+streamlit == 1.40.2
+pandasai == 2.4.0
+numpy == 1.26.3
+PyYAML == 6.0.2
+pandas == 1.5.3

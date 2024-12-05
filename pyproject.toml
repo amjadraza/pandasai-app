@@ -9,8 +9,8 @@ packages = [{include = "pandasai_app"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
-streamlit = "1.39.0"
-pandasai = "2.2.15"
+streamlit = "1.40.2"
+pandasai = "2.4.0"
 numpy = "1.26.3"
 PyYAML = "^6.0.2"
 
